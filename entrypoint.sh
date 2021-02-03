@@ -34,4 +34,4 @@ done
 
 base_url=$JUPYTERHUB_SERVICE_PREFIX
 
-voila /home/jovyan/tutorial_classification_sample.ipynb --port=${port} --no-browser --TagRemovePreprocessor.remove_cell_tags={"hidden",} --Voila.base_url=${base_url}
+voila /home/jovyan/tutorial_classification_sample.ipynb --port=${port} --no-browser --TagRemovePreprocessor.remove_cell_tags={"hidden",} --debug --Voila.base_url=${base_url}
