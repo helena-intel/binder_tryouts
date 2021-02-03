@@ -16,3 +16,8 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
+
+USER root
+COPY . /home/${USER}
+RUN chown -R ${USER} /home/${USER}
+USER ${USER}
