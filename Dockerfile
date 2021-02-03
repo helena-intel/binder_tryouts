@@ -21,3 +21,8 @@ USER root
 COPY . /home/${USER}
 RUN chown -R ${USER} /home/${USER}
 USER ${USER}
+
+EXPOSE 8888
+
+ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
+
