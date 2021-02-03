@@ -5,16 +5,15 @@ RUN pip install --no-cache --upgrade pip && \
 RUN pip install openvino numpy==1.19 ipywidgets pyyaml matplotlib voila
 
 # create user with a home directory
-ARG NB_USER
-ARG NB_UID
-ENV USER ${NB_USER}
-ENV HOME /home/${NB_USER}
+ENV USER jovyan
+ENV HOME /home/jovyan
 
 RUN adduser --disabled-password \
     --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
+    --uid 1000 \
+    jovyan
 WORKDIR ${HOME}
+
 USER ${USER}
 
 USER root
