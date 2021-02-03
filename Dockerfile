@@ -12,16 +12,15 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid 1000 \
     jovyan
-WORKDIR ${HOME}
+WORKDIR $HOME
 
-USER ${USER}
 
-USER root
-COPY . /home/${USER}
-RUN chown -R ${USER} /home/${USER}
-USER ${USER}
+USER jovyan
+
+COPY --chown=jovyan:jovyan . /home/${USER}
 
 EXPOSE 8888
+
 
 ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
 
