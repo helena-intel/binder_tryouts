@@ -1,4 +1,8 @@
 FROM python:3.7-slim
+
+# For opencv
+RUN apt install ffmpeg libsm6 libxext6
+
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
