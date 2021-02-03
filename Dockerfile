@@ -2,7 +2,7 @@ FROM python:3.7-slim
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
-RUN pip install openvino numpy==1.19 ipywidgets pyyaml matplotlib voila
+RUN pip install openvino numpy==1.19 ipywidgets pyyaml matplotlib voila opencv-python
 
 # create user with a home directory
 ENV USER jovyan
