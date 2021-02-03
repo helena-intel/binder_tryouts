@@ -27,5 +27,5 @@ EXPOSE 8888
 
 ENV LD_LIBRARY_PATH /usr/local/lib
 
-#ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
+ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
 
