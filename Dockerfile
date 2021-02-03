@@ -26,5 +26,5 @@ COPY --chown=jovyan:jovyan . /home/${USER}
 EXPOSE 8888
 
 
-ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
+#ENTRYPOINT ["/home/jovyan/entrypoint.sh"]
 
