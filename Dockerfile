@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 
 # For opencv
-RUN apt install ffmpeg libsm6 libxext6
+RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
